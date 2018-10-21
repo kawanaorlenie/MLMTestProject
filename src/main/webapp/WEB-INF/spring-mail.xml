@@ -1,0 +1,43 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="jaa4567java@gmail.com" />
+		<property name="password" value="1qazxsw22" />
+
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage">
+
+		<property name="from" value="jaa4567java@gmail.com" />
+		<property name="subject" value="Activate account" />
+<!-- 		<property name="text">
+			<value>
+			<![CDATA[
+				Dear %s,
+				Please click link below to activate account.
+				http://localhost:8081/mlm/activation/id=%s
+			]]>
+			</value>
+		</property> -->
+	</bean>
+
+
+
+</beans>

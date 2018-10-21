@@ -1,0 +1,12 @@
+#container {
+	width: 1000px;
+	left: 50%;
+	margin-left: -500px;
+}
+
+.ui-tabs {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	overflow: auto;
+}

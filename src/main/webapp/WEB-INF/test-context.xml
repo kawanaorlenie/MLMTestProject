@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<bean id="categoriesService" class="org.mockito.Mockito"
+		factory-method="mock">
+		<constructor-arg value="org.mlm.service.CategoriesService" />
+	</bean>
+	<bean id="userService" class="org.mockito.Mockito" factory-method="mock">
+		<constructor-arg value="org.mlm.service.UserService" />
+	</bean>
+	<bean id="eventsService" class="org.mockito.Mockito"
+		factory-method="mock">
+		<constructor-arg value="org.mlm.service.EventsService" />
+	</bean>
+	<bean id="forgotPasswordService" class="org.mockito.Mockito"
+		factory-method="mock">
+		<constructor-arg value="org.mlm.service.ForgotPasswordService" />
+	</bean>
+	<bean id="mailService" class="org.mockito.Mockito" factory-method="mock">
+		<constructor-arg value="org.mlm.service.MailService" />
+	</bean>
+	<bean id="resetPasswordService" class="org.mockito.Mockito"
+		factory-method="mock">
+		<constructor-arg value="org.mlm.service.ResetPasswordService" />
+	</bean>
+	<bean id="validationService" class="org.mockito.Mockito"
+		factory-method="mock">
+		<constructor-arg value="org.mlm.service.ValidationService" />
+	</bean>
+
+
+	<bean id="roleDAO" class="org.mockito.Mockito" factory-method="mock">
+		<constructor-arg value="org.mlm.dao.RoleDAO" />
+	</bean>
+
+	<bean id="userDAO" class="org.mockito.Mockito" factory-method="mock">
+		<constructor-arg value="org.mlm.dao.UserDAO" />
+	</bean>
+
+	<bean id="activationDAO" class="org.mockito.Mockito"
+		factory-method="mock">
+		<constructor-arg value="org.mlm.dao.ActivationDAO" />
+	</bean>
+
+	<bean id="categoryDAO" class="org.mockito.Mockito" factory-method="mock">
+		<constructor-arg value="org.mlm.dao.CategoryDAO" />
+	</bean>
+
+	<bean id="eventsDAO" class="org.mockito.Mockito" factory-method="mock">
+		<constructor-arg value="org.mlm.dao.EventsDAO" />
+	</bean>
+
+	<bean id="forgotPasswordDAO" class="org.mockito.Mockito"
+		factory-method="mock">
+		<constructor-arg value="org.mlm.dao.ForgotPasswordDAO" />
+	</bean>
+
+	
+<!-- 	<bean id="searchEventsDAO" class="org.mockito.Mockito"
+		factory-method="mock">
+		<constructor-arg value="org.mlm.dao.impl.SearchEventsDAOimpl" />
+	</bean> -->
+
+	<!-- <bean id="sessionFactory" class="org.mockito.Mockito" factory-method="mock"> 
+		<constructor-arg value="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" 
+		/> </bean> -->
+	<!-- <context:component-scan base-package="org.mlm.service" /> <context:component-scan 
+		base-package="org.mlm.dao" /> -->
+
+</beans>

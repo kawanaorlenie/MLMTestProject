@@ -1,0 +1,54 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security.xsd
+	http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<context:component-scan base-package="org.mlm.service" />
+
+	<http auto-config="true">
+		<intercept-url pattern="/admin**" access="ROLE_ADMIN" />
+		<intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
+		
+		<intercept-url pattern="/user**" access="ROLE_USER" />
+		<intercept-url pattern="/user/**" access="ROLE_USER" />
+		
+		<intercept-url pattern="/guest/**" access="ROLE_ANONYMOUS" />
+		
+		<intercept-url pattern="/" access="ROLE_ANONYMOUS" />
+		<intercept-url pattern="/signup*" access="ROLE_ANONYMOUS" />
+		<intercept-url pattern="/loginfailed*" access="ROLE_ANONYMOUS" />
+		<intercept-url pattern="/logout*" access="ROLE_ANONYMOUS" />
+		<intercept-url pattern="/forgot**" access="ROLE_ANONYMOUS" />
+		<intercept-url pattern="/reset**" access="ROLE_ANONYMOUS" />
+
+
+		<form-login login-page="/" default-target-url="/user/categories" authentication-failure-url="/loginfailed" always-use-default-target="true" />
+		<logout logout-success-url="/logout" />
+		
+		<remember-me key="myAppKey" /> 
+		<access-denied-handler error-page="/user/categories" />
+
+
+	</http>
+
+	<authentication-manager>
+		<!-- <authentication-provider> <jdbc-user-service data-source-ref="dataSource" users-by-username-query="select username,password,enabled from users where 
+			username=?" authorities-by-username-query="select u.username, ur.authority from users u, user_roles ur where u.user_id = ur.user_id and u.username =? " 
+			/> </authentication-provider> -->
+<!-- 		<authentication-provider>
+			<password-encoder hash="sha" />
+			<user-service>
+				<user name="admin" password="5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider> -->
+		<authentication-provider user-service-ref="userServiceImpl">
+			<password-encoder hash="sha" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

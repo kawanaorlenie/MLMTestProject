@@ -1,0 +1,40 @@
+#tabs ul li a:focus {
+	outline: none;
+}
+
+.ui-tabs {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	overflow: auto;
+}
+
+.login-form{
+	position: absolute;
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
+}
+button{
+	display: block-inline;
+}
+
+fieldset{
+	width: 400px;
+	margin: auto;
+}
+fieldset > label{
+	text-align:right;
+	padding-right: 5px;
+	width: 50%;
+	white-space: nowrap;
+}
+
+fieldset > input[type="text"],input[type="password"]{
+	width: 45%;
+}
+label.with-checkbox{
+	width: auto;
+	display: block;
+	text-align:center;
+}

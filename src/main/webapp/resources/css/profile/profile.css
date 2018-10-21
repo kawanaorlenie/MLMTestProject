@@ -1,0 +1,39 @@
+.profile-container{
+	width: 600px;
+	height: 300px;
+	margin: 10px auto;
+	position: static;
+}
+table{
+
+}
+.photo-container, .table-container{
+	position: absolute;
+	display: inline-block;
+	width: 290px;
+	height: 80%;
+	padding: 30px 40px;
+}
+.photo-container{
+	left: 50%;
+}
+
+img{
+	width: 200px;
+}
+
+.table-container > label, .table-container > h4{
+	width: 45%;
+	display: inline-block;
+}
+
+select{
+	color: black;
+}
+
+.buttons-container{
+	
+	margin: 20px auto;
+	display: block;
+	width: 450px;
+}

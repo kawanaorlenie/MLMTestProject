@@ -1,0 +1,102 @@
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//ApacheSoftwareFoundation//DTDTilesConfiguration2.1//EN" 
+"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<definition name="template" template="/WEB-INF/views/template/main_template.jsp">
+		<put-attribute name="title" value="Template Title" />
+		<put-attribute name="css" value="template" />
+	</definition>
+
+	<definition name="adminPanel" extends="template">
+		<put-attribute name="title" value="Admin Panel" />
+		<put-attribute name="css" value="/WEB-INF/views/adminPanel/adminPanelCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/adminPanel/adminPanelJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/adminPanel/adminPanel.jsp" />
+	</definition>
+
+	<definition name="login" extends="template">
+		<put-attribute name="title" value="Login Page" />
+		<put-attribute name="css" value="/WEB-INF/views/login/loginCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/login/loginJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/login/login.jsp" />
+	</definition>
+
+	<definition name="profile" extends="template">
+		<put-attribute name="title" value="Profile Page" />
+		<put-attribute name="css" value="/WEB-INF/views/profile/profileCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/profile/profileJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/profile/profile.jsp" />
+	</definition>
+	
+	<definition name="UserProfile" extends="template">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="css" value="/WEB-INF/views/profile/profileCSS.jsp" />
+		<put-attribute name="js" value="" />
+		<put-attribute name="jsp" value="/WEB-INF/views/profile/UserProfile.jsp" />
+	</definition>
+	
+	<definition name="noSuchUser" extends="template">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="css" value="/WEB-INF/views/profile/profileCSS.jsp" />
+		<put-attribute name="js" value="" />
+		<put-attribute name="jsp" value="/WEB-INF/views/profile/noSuchUser.jsp" />
+	</definition>
+
+	<definition name="resetPassword" extends="template">
+		<put-attribute name="title" value="Reset Password" />
+		<put-attribute name="css" value="/WEB-INF/views/resetPassword/resetPasswordCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/resetPassword/resetPasswordJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/resetPassword/resetPassword.jsp" />
+	</definition>
+
+	<definition name="categories" extends="template">
+		<put-attribute name="title" value="Event Categories" />
+		<put-attribute name="css" value="/WEB-INF/views/categories/categoriesCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/categories/categoriesJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/categories/categories.jsp" />
+	</definition>
+
+	<definition name="category_events" extends="template">
+		<put-attribute name="title" value="Events" />
+		<put-attribute name="css" value="/WEB-INF/views/category/category_eventsCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/category/category_eventsJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/category/category_events.jsp" />
+	</definition>
+	
+	<definition name="organizatorPanel" extends="template">
+		<put-attribute name="title" value="Organizer Panel" />
+		<put-attribute name="css" value="/WEB-INF/views/organizatorPanel/organizatorPanelCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/organizatorPanel/organizatorPanelJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/organizatorPanel/organizatorPanel.jsp" />
+	</definition>
+	
+	<definition name="participations" extends="template">
+		<put-attribute name="title" value="Participations" />
+		<put-attribute name="css" value="/WEB-INF/views/participations/participationsCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/participations/participationsJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/participations/participations.jsp" />
+	</definition>
+	
+	<definition name="event" extends="template">
+		<put-attribute name="title" value="Event" />
+		<put-attribute name="css" value="/WEB-INF/views/event/eventCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/event/eventJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/event/event.jsp" />
+	</definition>
+	
+	<definition name="noSuchEvent" extends="template">
+		<put-attribute name="title" value="no Such Event" />
+		<put-attribute name="css" value="/WEB-INF/views/event/eventCSS.jsp" />
+		<put-attribute name="js" value="" />
+		<put-attribute name="jsp" value="/WEB-INF/views/event/noSuchEvent.jsp" />
+	</definition>
+
+	<definition name="select_categories" extends="template">
+		<put-attribute name="title" value="Event Categories" />
+		<put-attribute name="css" value="/WEB-INF/views/categories/select_categoriesCSS.jsp" />
+		<put-attribute name="js" value="/WEB-INF/views/categories/select_categoriesJS.jsp" />
+		<put-attribute name="jsp" value="/WEB-INF/views/categories/select_categories.jsp" />
+	</definition>
+
+</tiles-definitions>
